@@ -1,33 +1,120 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>野江ミルクセンター | 新鮮な牛乳をお届けします</title>
+    <title>野江ミルクセンター | 新鮮な牛乳をお届け</title>
     <link rel="stylesheet" href="style.css">
+    <!-- AOSライブラリでスクロール時ふわっと動かす -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 <body>
     <header>
-        <h1>野江ミルクセンター</h1>
-        <p>毎朝新鮮な牛乳をお届けしています</p>
+        <img src="images/noe-milk-logo.png" alt="野江ミルクセンター ロゴ" class="logo">
+        <h1 data-aos="fade-down">野江ミルクセンター</h1>
+        <p data-aos="fade-down" data-aos-delay="200">毎朝新鮮な牛乳をご自宅へお届けします</p>
     </header>
 
     <main>
-        <section>
+<section class="hero">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/top-banner.png" alt="採れたての美味しい牛乳をお届けします">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://dainyu.or.jp/wp-content/themes/dainyu-theme/image/top/image1@2x.webp" alt="画像1">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://dainyu.or.jp/wp-content/themes/dainyu-theme/image/story/image2@2x.webp" alt="画像2">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://dainyu.or.jp/wp-content/themes/dainyu-theme/image/delivery-milk/main-image@2x.webp" alt="画像3">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://dainyu.or.jp/wp-content/themes/dainyu-theme/image/delivery-milk/202306/design-main@2x.webp" alt="画像4">
+            </div>
+        </div>
+        <!-- ページネーション（ドット） -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+
+
+        <section class="about" data-aos="fade-up">
             <h2>私たちについて</h2>
-            <p>野江ミルクセンターは地域の皆様へ新鮮でおいしい牛乳を毎朝配達しています。お気軽にお電話・LINEでご注文ください。</p>
+            <p>野江ミルクセンターは地域の皆様へ温かみのあるレトロなスタイルで毎朝新鮮な牛乳をお届けしています。白バラ牛乳・大山牛乳の取り扱いがあり、配達専用のサービスを行っております。</p>
         </section>
 
-        <section>
+        <section class="contact" data-aos="fade-up">
             <h2>お問い合わせ</h2>
-            <p>ご注文・お問い合わせは下記までお気軽にご連絡ください。</p>
-            <p><a href="tel:08012345678">📞 080-1234-5678</a></p>
-            <p><a href="https://line.me/">LINEで連絡する</a></p>
+            <p>ご注文・お問い合わせはお気軽にお電話またはLINEにてご連絡ください。</p>
+            <p><a href="tel:08012345678" class="contact-btn">電話する</a></p>
+            <p><a href="https://line.me/" class="contact-btn">LINEで連絡する</a></p>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 野江ミルクセンター</p>
+        <p>© 2025 野江ミルクセンター | 配達専門</p>
     </footer>
+
+    <!-- AOSライブラリ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const height = window.innerHeight;
+
+        if (scrollY < height) {
+            document.getElementById('panel1').style.opacity = 1;
+            document.getElementById('panel2').style.opacity = 0;
+            document.getElementById('panel3').style.opacity = 0;
+            document.getElementById('panel4').style.opacity = 0;
+        } else if (scrollY >= height && scrollY < height * 2) {
+            document.getElementById('panel1').style.opacity = 0;
+            document.getElementById('panel2').style.opacity = 1;
+            document.getElementById('panel3').style.opacity = 0;
+            document.getElementById('panel4').style.opacity = 0;
+        } else if (scrollY >= height * 2 && scrollY < height * 3) {
+            document.getElementById('panel1').style.opacity = 0;
+            document.getElementById('panel2').style.opacity = 0;
+            document.getElementById('panel3').style.opacity = 1;
+            document.getElementById('panel4').style.opacity = 0;
+        } else {
+            document.getElementById('panel1').style.opacity = 0;
+            document.getElementById('panel2').style.opacity = 0;
+            document.getElementById('panel3').style.opacity = 0;
+            document.getElementById('panel4').style.opacity = 1;
+        }
+    });
+</script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 3000, // 3秒ごとに自動切替
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 0,
+    });
+</script>
+
+
 </body>
 </html>

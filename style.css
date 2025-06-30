@@ -1,5 +1,22 @@
+```css
+
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('fonts/NotoSansJP-Regular.otf') format('opentype');
+}
+
+body, h1, h2, h3, p, a {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.logo {
+    width: 150px; /* 大きさは必要に応じて変更 */
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -7,39 +24,89 @@ body {
     line-height: 1.6;
 }
 
-header {
-    background-color: #cce7ff;
-    color: #000;
-    padding: 20px;
-    text-align: center;
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
+.panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+header {
+    background-color: #fff;
+    color: #e34234;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+h1, h2 {
+    margin: 0 0 10px;
 }
 
 main {
     padding: 20px;
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
 }
 
+.hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #e34234;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+.hero {
+    width: 100%;
+    height: 60vh; /* 高さ調整 */
+    overflow: hidden;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contact-btn:hover {
+    background-color: #c73028;
 }
 
 footer {
-    background-color: #cce7ff;
+    background-color: #fff;
+    color: #e34234;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    font-size: 0.9em;
+    border-top: 1px solid #eee;
 }
-
-a {
-    color: #007acc;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+```
