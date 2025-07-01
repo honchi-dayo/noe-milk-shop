@@ -401,13 +401,21 @@ body {
 
 @media (max-width: 1000px) {
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* タブレットで2列 */
+        grid-template-columns: repeat(3, 1fr); /* タブレットで2列 */
     }
 }
 
 @media (max-width: 600px) {
     .product-grid {
-        grid-template-columns: 1fr; /* スマホで1列 */
+        grid-template-columns: repeat(2, 1fr); /* スマホで2列 */
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 極小画面で1列 */
     }
 }
 
@@ -435,26 +443,27 @@ body {
         padding: 0 2vw;
     }
     .navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 5px;
+        flex-direction: row;      /* ←縦並びをやめる */
+        height: 60px;             /* ←高さ固定 */
+        padding: 0 10px;
     }
     .navbar-left {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;      /* ←縦並びをやめる */
+        align-items: center;
     }
     .navbar-logo {
-        width: 150px !important;
-        max-width: 80vw !important;
-        margin-bottom: 5px !important;
+        width: 110px !important;
+        max-width: 40vw !important;
+        margin-bottom: 0 !important;
     }
     .contact-btn {
-        width: 100%;
-        box-sizing: border-box;
+        width: auto;              /* ←幅を自動に */
         font-size: 1em;
-        padding: 14px 0;
-        margin: 10px 0;
+        padding: 10px 12px;
+        margin: 0 0 0 10px;       /* ロゴとの間隔だけ残す */
         text-align: center;
+        min-width: 0;
+        box-sizing: border-box;
     }
     header {
         padding: 20px 5px;
@@ -483,3 +492,4 @@ body {
         padding: 10px;
     }
 }
+```

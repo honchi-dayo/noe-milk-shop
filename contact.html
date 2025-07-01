@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ | 野江ミルクセンター</title>
+    <link rel="stylesheet" href="style.css" />
+<style>
+body {
+    background: #f9f9f9;
+    color: #333;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+h1 {
+    color: #e60012;
+    text-align: center;
+    margin-bottom: 20px;
+}
+form.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: auto;
+}
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.contact-form label.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: normal;
+}
+.contact-form input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+button {
+    background-color:#e60012;
+    color:#fff;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:20px;
+    width: 100%;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #c7000b;
+}
+a {
+    color: #e60012;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+</style>
+
+</head>
+<body>
+    <main style="max-width: 500px; margin: 50px auto; padding: 0 20px;">
+        <h1>お問い合わせ</h1>
+        <form class="contact-form" action="https://formspree.io/f/xxxxxx" method="POST">
+            <label>お名前</label>
+            <input type="text" name="お名前" required />
+
+            <label>フリガナ</label>
+            <input type="text" name="フリガナ" required />
+
+            <label>郵便番号</label>
+            <input type="text" name="郵便番号" required />
+
+            <label>住所</label>
+            <input type="text" name="住所" required />
+
+            <label>電話番号</label>
+            <input type="tel" name="電話番号" required />
+
+            <label>メールアドレス</label>
+            <input type="email" name="メールアドレス" required />
+
+            <label>お問い合わせ内容</label>
+            <textarea name="お問い合わせ内容" rows="5" required></textarea>
+
+            <label class="checkbox-label">
+            <input type="checkbox" name="同意" required />
+            <a href="privacy.html" target="_blank">個人情報保護方針</a> に同意する
+            </label>
+
+            <button type="submit">送信する</button>
+        </form>
+        <p style="text-align: center; margin-top: 20px;"><a href="index.html">トップページに戻る</a></p>
+    </main>
+</body>
+</html>
