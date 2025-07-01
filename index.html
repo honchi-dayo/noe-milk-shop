@@ -1,36 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
-    <style>
-.navbar-logo {
-    height: auto !important;
-    width: 220px !important;
-    max-width: 250px !important;
-    object-fit: contain !important;
-    margin-right: 10px !important;
-}
-</style>
-
-    <header class="navbar">
-    <div class="navbar-left">
-        <img src="images/noe-milk-longlogo.png" alt="野江ミルクセンター ロゴ" class="navbar-logo">
-        <a href="#contact" class="contact-btn">お問い合わせはこちら</a>
-    </div>
-</header>
-
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>野江ミルクセンター | 新鮮な牛乳をお届け</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <!-- AOSライブラリでスクロール時ふわっと動かす -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
 </head>
 <body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <img src="images/noe-milk-longlogo.png" alt="野江ミルクセンター ロゴ" class="navbar-logo">
+            <a href="#contact" class="contact-btn">お問い合わせはこちら</a>
+        </div>
+    </header>
+
     <header>
         <img src="images/noe-milk-logo.png" alt="野江ミルクセンター ロゴ" class="logo">
         <h1 data-aos="fade-down">野江ミルクセンター</h1>
@@ -281,34 +269,6 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        const height = window.innerHeight;
-
-        if (scrollY < height) {
-            document.getElementById('panel1').style.opacity = 1;
-            document.getElementById('panel2').style.opacity = 0;
-            document.getElementById('panel3').style.opacity = 0;
-            document.getElementById('panel4').style.opacity = 0;
-        } else if (scrollY >= height && scrollY < height * 2) {
-            document.getElementById('panel1').style.opacity = 0;
-            document.getElementById('panel2').style.opacity = 1;
-            document.getElementById('panel3').style.opacity = 0;
-            document.getElementById('panel4').style.opacity = 0;
-        } else if (scrollY >= height * 2 && scrollY < height * 3) {
-            document.getElementById('panel1').style.opacity = 0;
-            document.getElementById('panel2').style.opacity = 0;
-            document.getElementById('panel3').style.opacity = 1;
-            document.getElementById('panel4').style.opacity = 0;
-        } else {
-            document.getElementById('panel1').style.opacity = 0;
-            document.getElementById('panel2').style.opacity = 0;
-            document.getElementById('panel3').style.opacity = 0;
-            document.getElementById('panel4').style.opacity = 1;
-        }
-    });
-</script>
-<script>
     const swiper = new Swiper('.swiper-container', {
         loop: true,
         autoplay: {
@@ -322,16 +282,16 @@
         slidesPerView: 1,
         spaceBetween: 0,
     });
-</script>
-<script>
-function openModal(id) {
-    document.getElementById(id).style.display = "block";
-}
+    </script>
+    <script>
+    function openModal(id) {
+        document.getElementById(id).style.display = "block";
+    }
 
-function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-}
-</script>
+    function closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+    </script>
 
 
 </body>

@@ -382,7 +382,13 @@ body {
     font-size: 1rem;
     color: #e60012;
 }
-
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* カードが詰まりすぎないよう200→220 */
+    gap: 40px; /* 20px→30pxに広げる */
+    justify-items: center;
+    padding: 20px;
+}
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3列固定 */
@@ -422,32 +428,58 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* スマホ用 */
+/* スマホ対応の追加・調整 */
 @media (max-width: 600px) {
+    body {
+        font-size: 15px;
+        padding: 0 2vw;
+    }
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 5px;
+    }
+    .navbar-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-logo {
+        width: 150px !important;
+        max-width: 80vw !important;
+        margin-bottom: 5px !important;
+    }
     .contact-btn {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        padding: 0.5em 1em;
-        font-size: 14px;
-        border-radius: 5px;
-        z-index: 1000;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 1em;
+        padding: 14px 0;
+        margin: 10px 0;
+        text-align: center;
     }
-
+    header {
+        padding: 20px 5px;
+    }
+    main {
+        padding: 10px 0;
+    }
     .modal-content {
-        width: 90%;
-        padding: 1em;
-        max-height: 90vh;
-        overflow-y: auto;
+        max-width: 98vw;
+        padding: 10px;
+        flex-direction: column;
     }
-
-    .close-btn {
-        font-size: 24px;
-        top: 10px;
-        right: 15px;
+    .modal-content img {
+        max-width: 90vw;
+        margin: 0 auto 10px auto;
+    }
+    .modal-text {
+        padding: 5px;
+    }
+    .product-card {
+        max-width: 95vw;
+        padding: 8px;
+    }
+    .product-grid {
+        gap: 15px;
+        padding: 10px;
     }
 }
-
-
-
-```
