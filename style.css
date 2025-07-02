@@ -707,3 +707,22 @@ body {
     margin-left: 8px !important;
   }
 }
+
+/* スマホ時：ロゴを大きく、ボタンを小さく（サイズをほぼ入れ替え） */
+@media (max-width: 600px) {
+  .navbar-logo {
+    width: 180px !important;
+    max-width: 85vw !important;
+    height: 50px !important;
+  }
+  .contact-btn {
+    font-size: 0.85em !important;
+    padding: 4px 8px !important;
+    height: 28px !important;
+    line-height: 1.1 !important;
+    min-width: 60px !important;
+    width: auto !important;
+    margin-left: 6px !important;
+  }
+}
+```
