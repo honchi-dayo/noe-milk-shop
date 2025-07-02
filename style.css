@@ -12,7 +12,7 @@ body, h1, h2, h3, p, a {
 .logo {
     width: 150px; /* 大きさは必要に応じて変更 */
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 5px auto;
 }
 
 body {
@@ -45,7 +45,7 @@ header {
     background-color: #fff;
     color: #e34234;
     text-align: center;
-    padding: 30px 20px;
+    padding: 10px 20px;
 }
 
 h1, h2 {
@@ -99,7 +99,7 @@ section {
     max-width: 200px;
     height: auto;
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 5px auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -468,7 +468,7 @@ body {
         box-sizing: border-box;
     }
     header {
-        padding: 20px 5px;
+        padding: 10px 5px;
     }
     main {
         padding: 10px 0;
@@ -495,21 +495,91 @@ body {
     }
 }
 
+/* --- スマホ用調整 --- */
 @media (max-width: 600px) {
-    .navbar {
-        height: auto !important;
-        min-height: 50px !important;
-        padding: 5px 10px !important;
-    }
-    body {
-        padding-top: 90px !important;
-    }
-    .product-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-        padding: 10px !important;
-        max-width: 100vw !important;
-    }
+  /* ① 商品画像サイズを小さくして重なり防止 */
+  .product-card img {
+    width: 90px !important;
+    height: auto !important;
+    max-width: 100%;
+    margin: 0 auto 8px auto;
+    display: block;
+  }
+  .product-card {
+    max-width: 95vw !important;
+    padding: 6px !important;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding: 8px !important;
+  }
+
+  /* ② モーダルを小さく */
+  .modal-content {
+    width: 92vw !important;
+    max-width: 340px !important;
+    padding: 10px !important;
+  }
+  .modal-content img {
+    width: 100% !important;
+    max-width: 220px !important;
+    margin: 0 auto 10px auto !important;
+    display: block;
+  }
+}
+
+.main-logo {
+  width: 400px;
+  max-width: 200vw;
+  display: block;
+  margin: 0 auto 5px auto;
+}
+@media (max-width: 600px) {
+  .main-logo {
+    width: 250px;
+    max-width: 150vw;
+  }
+}
+
+/* ロゴまわりの余白をさらに詰める */
+header {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.main-logo {
+    margin: 0 auto 0 auto !important;
+    display: block;
+}
+
+.logo {
+    margin: 0 auto 0 auto !important;
+    display: block;
+}
+
+header p {
+    margin-top: 8px !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+/* ロゴまわりの余白を徹底的に詰める */
+header {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.main-logo,
+.logo {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    display: block;
+}
+header p {
+    margin-top: 8px !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
 }
 ```
