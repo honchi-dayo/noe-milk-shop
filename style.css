@@ -582,4 +582,72 @@ header p {
     margin-bottom: 0 !important;
     padding: 0 !important;
 }
+
+/* --- ① カードのサイズを小さく --- */
+@media (max-width: 600px) {
+  .product-card {
+    max-width: 140px !important;
+    padding: 6px !important;
+  }
+  .product-card img {
+    width: 80px !important;
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto 6px auto !important;
+    display: block;
+  }
+  .product-grid {
+    gap: 8px !important;
+    padding: 4px !important;
+  }
+}
+
+/* --- ② モーダルのサイズ調整 --- */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90vw !important;
+    max-width: 300px !important;
+    padding: 8px !important;
+  }
+  .modal-content img {
+    max-width: 150px !important;
+    margin: 0 auto 8px auto !important;
+  }
+}
+
+/* --- ③ 余白を全体的に詰める --- */
+header,
+.main-logo,
+.logo,
+header p,
+.products,
+.product-grid {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+body {
+  padding-top: 60px !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 600px) {
+  header,
+  .main-logo,
+  .logo,
+  header p,
+  .products,
+  .product-grid {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  body {
+    padding-top: 60px !important;
+    padding-bottom: 0 !important;
+  }
+}
 ```
