@@ -655,15 +655,24 @@ body {
 @media (max-width: 600px) {
   section.hero,
   .swiper-container,
+  .swiper-wrapper,
   .swiper-slide {
     height: auto !important;
     min-height: 0 !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
   }
   .swiper-container {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 ```
