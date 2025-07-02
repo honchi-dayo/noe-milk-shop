@@ -703,30 +703,3 @@ body {
     display: inline-block !important;
     box-sizing: border-box !important;
   }
-}
-.hero,
-.swiper-container {
-    width: 100%;
-    height: auto !important;  /* ← 高さ固定をなくす */
-    overflow: hidden;
-}
-
-.swiper-slide img {
-    width: 100% !important;
-    height: auto !important;
-    object-fit: contain !important;  /* 比率維持優先 */
-    display: block;
-}
-}
-.swiper-container {
-    width: 100%;
-    aspect-ratio: 3/2; /* 一枚目の比率に合わせる */
-    overflow: hidden;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
