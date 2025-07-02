@@ -697,6 +697,12 @@ body {
     width: 180px !important;
     max-width: 85vw !important;
     height: 50px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin-right: 8px !important;
+    object-fit: contain !important;
+    display: inline-block !important;
   }
   .contact-btn {
     font-size: 0.85em !important;
@@ -706,6 +712,8 @@ body {
     min-width: 60px !important;
     width: auto !important;
     margin-left: 6px !important;
+    display: inline-block !important;
+    box-sizing: border-box !important;
   }
 }
 ```
