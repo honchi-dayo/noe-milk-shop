@@ -691,23 +691,6 @@ body {
   margin-bottom: 60px !important;
 }
 
-/* スマホ時のヘッダーロゴを大きく、ボタンを小さく */
-@media (max-width: 600px) {
-  .navbar-logo {
-    width: 120px !important;
-    max-width: 60vw !important;
-  }
-  .contact-btn {
-    font-size: 0.95em !important;
-    padding: 6px 12px !important;
-    height: 36px !important;
-    line-height: 1.2 !important;
-    min-width: 0 !important;
-    width: auto !important;
-    margin-left: 8px !important;
-  }
-}
-
 /* スマホ時：ロゴを大きく、ボタンを小さく（サイズをほぼ入れ替え） */
 @media (max-width: 600px) {
   .navbar-logo {
