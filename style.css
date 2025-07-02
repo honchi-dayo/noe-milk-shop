@@ -722,15 +722,25 @@ body {
     aspect-ratio: unset !important;
     height: auto !important;
     min-height: 0 !important;
-    max-height: 50vw !important; /* 必要に応じて調整 */
-    overflow: hidden !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .swiper-slide {
+    height: auto !important;
+    min-height: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #fff !important;
   }
   .swiper-slide img {
     width: 100% !important;
     height: auto !important;
-    max-height: 50vw !important; /* 必要に応じて調整 */
+    max-height: none !important;
     object-fit: contain !important;
     display: block !important;
+    margin: 0 auto !important;
+    background: #fff !important;
   }
 }
 ```
