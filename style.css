@@ -716,4 +716,21 @@ body {
     box-sizing: border-box !important;
   }
 }
+
+@media (max-width: 600px) {
+  .swiper-container {
+    aspect-ratio: unset !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 50vw !important; /* 必要に応じて調整 */
+    overflow: hidden !important;
+  }
+  .swiper-slide img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 50vw !important; /* 必要に応じて調整 */
+    object-fit: contain !important;
+    display: block !important;
+  }
+}
 ```
