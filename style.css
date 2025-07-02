@@ -674,19 +674,7 @@ body {
     margin: 0 !important;
     padding: 0 !important;
   }
-}
-.swiper-container {
-    width: 100%;
-    aspect-ratio: 3/2; /* 一枚目の比率に合わせる */
-    overflow: hidden;
-}
 
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 .products {
   margin-bottom: 60px !important;
 }
@@ -716,41 +704,29 @@ body {
     box-sizing: border-box !important;
   }
 }
+.hero,
+.swiper-container {
+    width: 100%;
+    height: auto !important;  /* ← 高さ固定をなくす */
+    overflow: hidden;
+}
 
-/* --- Swiper画像サイズ統一：このブロックだけ残してください --- */
-@media (max-width: 600px) {
-  .swiper-container {
-    aspect-ratio: 3/2 !important; /* 一枚目の比率に固定 */
-    width: 100vw !important;
-    max-width: 100vw !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    overflow: hidden !important;
-    background: #fff !important;
-  }
-  .swiper-wrapper,
-  .swiper-slide {
-    height: 100% !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: #fff !important;
-  }
-  .swiper-slide img {
+.swiper-slide img {
     width: 100% !important;
     height: auto !important;
-    max-width: 100vw !important;
-    max-height: 100% !important;
-    object-fit: contain !important; /* cover→containに変更 */
-    display: block !important;
-    margin: 0 auto !important;
-    background: #fff !important;
-  }
+    object-fit: contain !important;  /* 比率維持優先 */
+    display: block;
 }
-```
+}
+.swiper-container {
+    width: 100%;
+    aspect-ratio: 3/2; /* 一枚目の比率に合わせる */
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
