@@ -199,6 +199,25 @@ footer {
     font-weight: bold;
 }
 
+/* 宅配について */
+a.takuhai-btn {
+    display: inline-block !important;
+    border: 2px solid #e34234 !important;
+    background-color: #ffffff !important;
+    color: #e34234 !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    font-weight: normal !important;
+    transition: background-color 0.3s, color 0.3s !important;
+}
+
+a.takuhai-btn:hover {
+    background-color: #e34234 !important;
+    color: #ffffff !important;
+}
+
+
 body {
     padding-top: 60px; /* ナビバー分の余白を追加 */
 }
@@ -754,7 +773,6 @@ h1, h2, h3 {
 
 
 
+
 ```
-
-
 
