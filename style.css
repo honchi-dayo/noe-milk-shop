@@ -1,11 +1,10 @@
-```css
-
-@font-face {
+```css @font-face {
     font-family: 'M PLUS Rounded 1c';
     src: url('fonts/MPLUSRounded1c-Regular.woff2') format('woff2');
     font-weight: 400;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'M PLUS Rounded 1c';
     src: url('fonts/MPLUSRounded1c-Bold.woff2') format('woff2');
@@ -14,14 +13,31 @@
 }
 
 /* 全体にフォントを適用（重さは指定しない） */
-body, h1, h2, h3, h4, h5, h6, p, a, li, input, textarea, button {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+input,
+textarea,
+button {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 /* 見出しだけ太字にする */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
 }
 
@@ -32,7 +48,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .logo {
-    width: 150px; /* 大きさは必要に応じて変更 */
+    width: 150px;
+    /* 大きさは必要に応じて変更 */
     display: block;
     margin: 0 auto 5px auto;
 }
@@ -43,7 +60,8 @@ body {
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
-    font-size: 18px; /* お好みで16～20px程度に調整 */
+    font-size: 18px;
+    /* お好みで16～20px程度に調整 */
 }
 
 .hero {
@@ -70,7 +88,8 @@ header {
     padding: 10px 20px;
 }
 
-h1, h2 {
+h1,
+h2 {
     margin: 0 0 10px;
 }
 
@@ -101,9 +120,11 @@ section {
     margin: 5px;
     transition: background-color 0.3s;
 }
+
 .hero {
     width: 100%;
-    height: 60vh; /* 高さ調整 */
+    height: 60vh;
+    /* 高さ調整 */
     overflow: hidden;
 }
 
@@ -117,6 +138,7 @@ section {
     height: 100%;
     object-fit: cover;
 }
+
 .logo {
     max-width: 200px;
     height: auto;
@@ -128,9 +150,11 @@ section {
     .logo {
         max-width: 150px;
     }
+
     header h1 {
         font-size: 1.5em;
     }
+
     header p {
         font-size: 1em;
     }
@@ -162,7 +186,7 @@ footer {
     width: 100%;
     height: 60px;
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -176,7 +200,8 @@ footer {
 }
 
 .navbar-left .contact-btn {
-    margin-left: 20px; /* ロゴとの間隔を調整 */
+    margin-left: 20px;
+    /* ロゴとの間隔を調整 */
 }
 
 
@@ -191,7 +216,8 @@ footer {
 }
 
 .navbar-right .contact-btn {
-    background: #e53935; /* 赤色 */
+    background: #e53935;
+    /* 赤色 */
     color: #fff;
     padding: 8px 12px;
     border-radius: 5px;
@@ -219,13 +245,17 @@ a.takuhai-btn:hover {
 
 
 body {
-    padding-top: 60px; /* ナビバー分の余白を追加 */
+    padding-top: 60px;
+    /* ナビバー分の余白を追加 */
 }
 
 .navbar-logo {
-    height: auto !important;     /* 高さを自動で比率維持 */
-    width: 300px !important;     /* 横幅で大きさ調整 */
-    max-width: 350px !important; /* 必要ならさらに大きく */
+    height: auto !important;
+    /* 高さを自動で比率維持 */
+    width: 300px !important;
+    /* 横幅で大きさ調整 */
+    max-width: 350px !important;
+    /* 必要ならさらに大きく */
     object-fit: contain !important;
     margin-right: 10px !important;
 }
@@ -236,6 +266,7 @@ body {
         max-width: 200px;
     }
 }
+
 .products {
     padding: 40px 20px;
     text-align: center;
@@ -252,7 +283,7 @@ body {
 .product-card {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 250px;
     padding: 15px;
     text-align: center;
@@ -288,15 +319,19 @@ body {
     color: #555;
     margin-top: 5px;
 }
+
 /* モーダル基本 */
 .modal {
     display: none;
     position: fixed;
     z-index: 999;
     padding-top: 60px;
-    left: 0; top: 0; width: 100%; height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* モーダル内容 */
@@ -317,11 +352,14 @@ body {
     font-size: 28px;
     font-weight: bold;
     position: absolute;
-    right: 15px; top: 10px;
+    right: 15px;
+    top: 10px;
     cursor: pointer;
 }
 
-.close:hover { color: #333; }
+.close:hover {
+    color: #333;
+}
 
 .modal-img {
     width: 100%;
@@ -329,19 +367,24 @@ body {
     border-radius: 5px;
     margin-bottom: 15px;
 }
+
 .modal {
     display: none;
     position: fixed;
     z-index: 9999;
     padding: 20px;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
     overflow: auto;
 }
 
 .modal-content {
     background-color: white;
-    border: 3px solid #e60012; /* 赤枠 */
+    border: 3px solid #e60012;
+    /* 赤枠 */
     border-radius: 20px;
     max-width: 800px;
     margin: 50px auto;
@@ -376,6 +419,7 @@ body {
     font-size: 1.3em;
     font-weight: 700;
 }
+
 .modal-content .modal-text p {
     font-size: 1em;
     line-height: 1.7;
@@ -388,7 +432,8 @@ body {
 
 .close {
     position: absolute;
-    top: 10px; right: 20px;
+    top: 10px;
+    right: 20px;
     font-size: 30px;
     font-weight: bold;
     color: #e60012;
@@ -403,14 +448,17 @@ body {
     .modal-content {
         flex-direction: column;
     }
+
     .modal-text {
         text-align: center;
     }
 }
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px; /* カード同士の隙間 */
+    gap: 20px;
+    /* カード同士の隙間 */
     justify-items: center;
     padding: 20px;
 }
@@ -422,7 +470,8 @@ body {
     padding: 15px;
     text-align: center;
     width: 100%;
-    max-width: 250px; /* カードの最大幅 */
+    max-width: 250px;
+    /* カードの最大幅 */
     transition: transform 0.2s;
 }
 
@@ -441,26 +490,34 @@ body {
     font-size: 1rem;
     color: #e60012;
 }
+
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* カードが詰まりすぎないよう200→220 */
-    gap: 40px; /* 20px→30pxに広げる */
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    /* カードが詰まりすぎないよう200→220 */
+    gap: 40px;
+    /* 20px→30pxに広げる */
     justify-items: center;
     padding: 20px;
 }
+
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3列固定 */
-    gap: 30px; /* 隙間 */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3列固定 */
+    gap: 30px;
+    /* 隙間 */
     justify-items: center;
     padding: 20px;
-    max-width: 1200px; /* 必要に応じて調整 */
+    max-width: 1200px;
+    /* 必要に応じて調整 */
     margin: 0 auto;
 }
 
 @media (max-width: 1000px) {
     .product-grid {
-        grid-template-columns: repeat(3, 1fr); /* タブレットで2列 */
+        grid-template-columns: repeat(3, 1fr);
+        /* タブレットで2列 */
     }
 }
 
@@ -476,7 +533,8 @@ body {
 
 @media (max-width: 400px) {
     .product-grid {
-        grid-template-columns: 1fr; /* 極小画面で1列 */
+        grid-template-columns: 1fr;
+        /* 極小画面で1列 */
     }
 }
 
@@ -486,15 +544,17 @@ body {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-    width: 100%; /* 幅自動調整 */
-    max-width: none; /* 制限解除 */
+    width: 100%;
+    /* 幅自動調整 */
+    max-width: none;
+    /* 制限解除 */
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* スマホ対応の追加・調整 */
@@ -503,51 +563,67 @@ body {
         font-size: 15px;
         padding: 0 2vw;
     }
+
     .navbar {
-        flex-direction: row;      /* ←縦並びをやめる */
-        height: 60px;             /* ←高さ固定 */
+        flex-direction: row;
+        /* ←縦並びをやめる */
+        height: 60px;
+        /* ←高さ固定 */
         padding: 0 10px;
     }
+
     .navbar-left {
-        flex-direction: row;      /* ←縦並びをやめる */
+        flex-direction: row;
+        /* ←縦並びをやめる */
         align-items: center;
     }
+
     .navbar-logo {
         width: 110px !important;
         max-width: 40vw !important;
         margin-bottom: 0 !important;
     }
+
     .contact-btn {
-        width: auto;              /* ←幅を自動に */
+        width: auto;
+        /* ←幅を自動に */
         font-size: 1em;
         padding: 10px 12px;
-        margin: 0 0 0 10px;       /* ロゴとの間隔だけ残す */
+        margin: 0 0 0 10px;
+        /* ロゴとの間隔だけ残す */
         text-align: center;
         min-width: 0;
         box-sizing: border-box;
     }
+
     header {
         padding: 10px 5px;
     }
+
     main {
         padding: 10px 0;
     }
+
     .modal-content {
         max-width: 98vw;
         padding: 10px;
         flex-direction: column;
     }
+
     .modal-content img {
         max-width: 90vw;
         margin: 0 auto 10px auto;
     }
+
     .modal-text {
         padding: 5px;
     }
+
     .product-card {
         max-width: 95vw;
         padding: 8px;
     }
+
     .product-grid {
         gap: 15px;
         padding: 10px;
@@ -556,49 +632,54 @@ body {
 
 /* --- スマホ用調整 --- */
 @media (max-width: 600px) {
-  /* ① 商品画像サイズを小さくして重なり防止 */
-  .product-card img {
-    width: 90px !important;
-    height: auto !important;
-    max-width: 100%;
-    margin: 0 auto 8px auto;
-    display: block;
-  }
-  .product-card {
-    max-width: 95vw !important;
-    padding: 6px !important;
-  }
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
-    padding: 8px !important;
-  }
 
-  /* ② モーダルを小さく */
-  .modal-content {
-    width: 92vw !important;
-    max-width: 340px !important;
-    padding: 10px !important;
-  }
-  .modal-content img {
-    width: 100% !important;
-    max-width: 220px !important;
-    margin: 0 auto 10px auto !important;
-    display: block;
-  }
+    /* ① 商品画像サイズを小さくして重なり防止 */
+    .product-card img {
+        width: 90px !important;
+        height: auto !important;
+        max-width: 100%;
+        margin: 0 auto 8px auto;
+        display: block;
+    }
+
+    .product-card {
+        max-width: 95vw !important;
+        padding: 6px !important;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        padding: 8px !important;
+    }
+
+    /* ② モーダルを小さく */
+    .modal-content {
+        width: 92vw !important;
+        max-width: 340px !important;
+        padding: 10px !important;
+    }
+
+    .modal-content img {
+        width: 100% !important;
+        max-width: 220px !important;
+        margin: 0 auto 10px auto !important;
+        display: block;
+    }
 }
 
 .main-logo {
-  width: 400px;
-  max-width: 200vw;
-  display: block;
-  margin: 0 auto 5px auto;
+    width: 400px;
+    max-width: 200vw;
+    display: block;
+    margin: 0 auto 5px auto;
 }
+
 @media (max-width: 600px) {
-  .main-logo {
-    width: 250px;
-    max-width: 150vw;
-  }
+    .main-logo {
+        width: 250px;
+        max-width: 150vw;
+    }
 }
 
 /* ロゴまわりの余白をさらに詰める */
@@ -629,6 +710,7 @@ header {
     padding: 0 !important;
     margin: 0 !important;
 }
+
 .main-logo,
 .logo {
     margin-top: 0 !important;
@@ -636,6 +718,7 @@ header {
     padding: 0 !important;
     display: block;
 }
+
 header p {
     margin-top: 8px !important;
     margin-bottom: 0 !important;
@@ -644,34 +727,37 @@ header p {
 
 /* --- ① カードのサイズを小さく --- */
 @media (max-width: 600px) {
-  .product-card {
-    max-width: 140px !important;
-    padding: 6px !important;
-  }
-  .product-card img {
-    width: 80px !important;
-    max-width: 100%;
-    height: auto !important;
-    margin: 0 auto 6px auto !important;
-    display: block;
-  }
-  .product-grid {
-    gap: 8px !important;
-    padding: 4px !important;
-  }
+    .product-card {
+        max-width: 140px !important;
+        padding: 6px !important;
+    }
+
+    .product-card img {
+        width: 80px !important;
+        max-width: 100%;
+        height: auto !important;
+        margin: 0 auto 6px auto !important;
+        display: block;
+    }
+
+    .product-grid {
+        gap: 8px !important;
+        padding: 4px !important;
+    }
 }
 
 /* --- ② モーダルのサイズ調整 --- */
 @media (max-width: 600px) {
-  .modal-content {
-    width: 90vw !important;
-    max-width: 300px !important;
-    padding: 8px !important;
-  }
-  .modal-content img {
-    max-width: 150px !important;
-    margin: 0 auto 8px auto !important;
-  }
+    .modal-content {
+        width: 90vw !important;
+        max-width: 300px !important;
+        padding: 8px !important;
+    }
+
+    .modal-content img {
+        max-width: 150px !important;
+        margin: 0 auto 8px auto !important;
+    }
 }
 
 /* --- ③ 余白を全体的に詰める --- */
@@ -681,98 +767,121 @@ header,
 header p,
 .products,
 .product-grid {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-body {
-  padding-top: 60px !important;
-  padding-bottom: 0 !important;
-}
-
-@media (max-width: 600px) {
-  header,
-  .main-logo,
-  .logo,
-  header p,
-  .products,
-  .product-grid {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-  }
-  body {
+}
+
+body {
     padding-top: 60px !important;
     padding-bottom: 0 !important;
-  }
+}
+
+@media (max-width: 600px) {
+
+    header,
+    .main-logo,
+    .logo,
+    header p,
+    .products,
+    .product-grid {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    body {
+        padding-top: 60px !important;
+        padding-bottom: 0 !important;
+    }
 }
 
 /* スマホでスワイパー下の空白をなくす */
 @media (max-width: 600px) {
-  section.hero,
-  .swiper-container,
-  .swiper-wrapper,
-  .swiper-slide {
-    height: auto !important;
-    min-height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-  }
-  .swiper-container {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
 
-/* スマホ時：ロゴを大きく、ボタンを小さく（サイズをほぼ入れ替え） */
-@media (max-width: 600px) {
-  .navbar-logo {
-    width: 180px !important;
-    max-width: 85vw !important;
-    height: 50px !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    padding: 0 !important;
-    margin-right: 8px !important;
-    object-fit: contain !important;
-    display: inline-block !important;
-  }
-  .contact-btn {
-    font-size: 0.85em !important;
-    padding: 4px 8px !important;
-    height: 28px !important;
-    line-height: 1.1 !important;
-    min-width: 60px !important;
-    width: auto !important;
-    margin-left: 6px !important;
-    display: inline-block !important;
-    box-sizing: border-box !important;
-  }
-  .products {
-  margin-bottom: 60px !important;
-}
-h1 { font-size: 2.2em; }
-h2 { font-size: 1.5em; }
-p, a, li, input, textarea, button {
-    font-size: 1em;
-}
-h1, h2, h3 {
-    margin: 0 0 10px;
-    font-weight: bold; /* 太字にする */
-}
+    section.hero,
+    .swiper-container,
+    .swiper-wrapper,
+    .swiper-slide {
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .swiper-container {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* スマホ時：ロゴを大きく、ボタンを小さく（サイズをほぼ入れ替え） */
+    @media (max-width: 600px) {
+        .navbar-logo {
+            width: 180px !important;
+            max-width: 85vw !important;
+            height: 50px !important;
+            min-width: 0 !important;
+            min-height: 0 !important;
+            padding: 0 !important;
+            margin-right: 8px !important;
+            object-fit: contain !important;
+            display: inline-block !important;
+        }
+
+        .contact-btn {
+            font-size: 0.85em !important;
+            padding: 4px 8px !important;
+            height: 28px !important;
+            line-height: 1.1 !important;
+            min-width: 60px !important;
+            width: auto !important;
+            margin-left: 6px !important;
+            display: inline-block !important;
+            box-sizing: border-box !important;
+        }
+
+        .products {
+            margin-bottom: 60px !important;
+        }
+
+        h1 {
+            font-size: 2.2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p,
+        a,
+        li,
+        input,
+        textarea,
+        button {
+            font-size: 1em;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0 0 10px;
+            font-weight: bold;
+            /* 太字にする */
+        }
 
 
 
 
-```
 
+        ```

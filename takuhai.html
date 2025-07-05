@@ -1,113 +1,240 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>宅配について | 野江ミルクセンター</title>
-    <link rel="icon" type="image/png" href="images/noe-milk-logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px; /* ヘッダーの高さ */
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* 中央揃え */
-    padding: 0 20px;
-    z-index: 1000;
-}
 
-.navbar-logo {
-    height: 40px; /* 画像の高さを明確化 */
-    width: auto;  /* 横は自動調整 */
-    object-fit: contain;
-    display: block;
-    margin: 0; /* 余計なマージン削除 */
-}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>宅配について | 野江ミルクセンター</title>
+        <link rel="icon" type="image/png" href="images/noe-milk-logo.png">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap"
+            rel="stylesheet">
+        <style>
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 60px;
+                /* ヘッダーの高さ */
+                background: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                /* 中央揃え */
+                padding: 0 20px;
+                z-index: 1000;
+            }
 
-</style>
-</head>
+            .navbar-logo {
+                height: 40px;
+                /* 画像の高さを明確化 */
+                width: auto;
+                /* 横は自動調整 */
+                object-fit: contain;
+                display: block;
+                margin: 0;
+                /* 余計なマージン削除 */
+            }
 
-<body>
-    <header class="navbar">
-        <div class="navbar-left">
-            <a href="index.html">
-                <img src="images/noe-milk-longlogo.png" alt="野江ミルクセンター ロゴ" class="navbar-logo">
-            </a>
-            <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
-            <a href="takuhai.html" class="takuhai-btn">宅配について</a>
-        </div>
-    </header>
+            .takuhaibox {
+                display: flex;
+                align-items: center;
+                /* 画像と文字を上下中央揃え */
+                gap: 20px;
+                margin: 30px 0;
+                flex-wrap: wrap;
+                /* スマホ時に縦並び */
+            }
 
-<main>
-        <!-- バナー表示 -->
-        <section class="hero">
-            <img src="images/top-banner3.jpg" alt="宅配イメージバナー" class="hero-img">
-        </section>
+            .takuhaibox {
+                display: flex;
+                align-items: center;
+                gap: 0px;
+                /* ← 間隔を狭く */
+                margin: 20px 0;
+                flex-wrap: wrap;
+            }
 
-        <!-- 宅配の流れ -->
-        <section class="takuhai-flow" data-aos="fade-up">
-            <h2>宅配の流れ</h2>
-            <div class="flow-steps">
-                <div class="flow-step">
-                    <img src="images/takuhai-0.png" alt="宅配の流れ" style="max-width: 100%; height: auto; margin: 20px 0;">
-                    <p>お申し込み</p>
-                </div>
-                <div class="flow-step">
-                    <img src="images/flow-delivery.png" alt="配達開始">
-                    <p>配達開始</p>
-                </div>
-                <div class="flow-step">
-                    <img src="images/flow-collect.png" alt="空瓶回収">
-                    <p>空瓶回収</p>
-                </div>
-                <div class="flow-step">
-                    <img src="images/flow-bill.png" alt="毎月ご請求">
-                    <p>毎月ご請求</p>
-                </div>
+            .milk-img {
+                width: 150px;
+                height: 150px;
+                /* ← 高さを固定 */
+                object-fit: contain;
+                /* ← アスペクト比が違う画像も収める */
+            }
+
+            .milk-text {
+                flex: 1;
+                min-width: 250px;
+                /* 文字ブロックが狭くなりすぎるのを防止 */
+                max-width: 500px;
+                /* 最大幅を持たせて行が長くなりすぎるのを防止 */
+            }
+
+
+            .milk-text p {
+                margin: 5px 0 0;
+                font-size: 16px;
+                color: #555;
+            }
+
+            .milk-img-yuu {
+                height: 185px;
+                /* 他より縦長にしてバランス調整 */
+            }
+
+            .contact-form {
+                max-width: 600px;
+                margin: 20px auto;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-family: "M PLUS Rounded 1c", sans-serif;
+            }
+
+            .contact-form textarea {
+                min-height: 120px;
+                resize: vertical;
+            }
+
+            .contact-form button {
+                padding: 12px;
+                background-color: #e74c3c;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                font-family: "M PLUS Rounded 1c", sans-serif;
+            }
+
+            .contact-form button:hover {
+                background-color: #c0392b;
+            }
+
+            h2 {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="navbar">
+            <div class="navbar-left">
+                <a href="index.html">
+                    <img src="images/noe-milk-longlogo.png" alt="野江ミルクセンター ロゴ" class="navbar-logo">
+                </a>
+                <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
+                <a href="takuhai.html" class="takuhai-btn">宅配について</a>
             </div>
-        </section>
+        </header>
 
-        <!-- 宅配のメリット -->
-        <section class="takuhai-merit" data-aos="fade-up">
-            <h2>宅配のメリット</h2>
-            <ul>
-                <li>✅ 毎朝新鮮な牛乳をご自宅へ</li>
-                <li>✅ 重い荷物を買いに行く必要なし</li>
-                <li>✅ 地域密着で安心のサポート</li>
-                <li>✅ 空瓶回収でゴミが減る</li>
-            </ul>
-        </section>
+        <main>
+            <!-- バナー表示 -->
+            <section class="hero">
+                <img src="images/top-banner3.jpg" alt="宅配イメージバナー" class="hero-img">
+            </section>
 
-        <!-- 申し込みフォーム -->
-        <section class="contact" data-aos="fade-up">
+            <!-- 宅配の流れ -->
+            <section class="takuhai-flow" data-aos="fade-up">
+                <h2>宅配の流れ</h2>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <img src="images/takuhai-0.png" alt="宅配の流れ"
+                            style="max-width: 100%; height: auto; margin: 20px 0;">
+                        <div class="flow-step">
+                        </div>
+                    </div>
+            </section>
+
+            <!-- 宅配のメリット -->
+            <section class="takuhai-merit" data-aos="fade-up">
+                <h2>宅配について</h2>
+                <ul>
+                    <img src="images/asahiruyuu.png" alt="宅配朝昼夕" style="max-width: 100%; height: auto; margin: 20px 0;">
+                    <div class="flow-step">
+
+                        <div class="takuhaibox">
+                            <img src="images/asa.jpeg" alt="牛乳配達朝イラスト" class="milk-img">
+                            <div class="milk-text">
+                                <h3>朝配達</h3>
+                                <p>朝に牛乳を飲みたい方に</p>
+                            </div>
+                        </div>
+
+                        <div class="takuhaibox">
+                            <img src="images/hiru.jpeg" alt="牛乳配達昼イラスト" class="milk-img">
+                            <div class="milk-text">
+                                <h3>昼配達</h3>
+                                <p>朝はゆっくりしたい方、朝が忙しい方に</p>
+                            </div>
+                        </div>
+
+                        <div class="takuhaibox">
+                            <img src="images/yuu.jpeg" alt="牛乳配達夕イラスト" class="milk-img milk-img-yuu">
+                            <div class="milk-text">
+                                <h3>夕方配達</h3>
+                                <p>お風呂あがりに飲みたい方に</p>
+                            </div>
+                        </div>
+                        <h3>お客様の生活に合わせてお届けします。</h3>
+                </ul>
+            </section>
+
+            <!-- 申し込みフォーム -->
             <h2>宅配のお申し込み</h2>
-            <p>宅配をご希望の方は、下記フォームよりお気軽にお申し込みください。</p>
-            <form action="submit_form.php" method="post" class="contact-form">
-                <input type="text" name="name" placeholder="お名前" required>
-                <input type="tel" name="phone" placeholder="電話番号" required>
-                <input type="email" name="email" placeholder="メールアドレス">
-                <textarea name="message" placeholder="ご住所・ご希望内容など"></textarea>
+            <form class="contact-form" action="https://formspree.io/f/xpwrbvdo" method="POST">
+                <input type="hidden" name="_subject" value="【野江ミルクセンター】宅配申し込みフォームからのお問い合わせ">
+                <label>お名前</label>
+                <input type="text" name="お名前" required />
+
+                <label>郵便番号</label>
+                <input type="text" name="郵便番号" required />
+
+                <label>住所</label>
+                <input type="text" name="住所" required />
+
+                <label>電話番号</label>
+                <input type="tel" name="電話番号" required />
+
+                <label>メールアドレス</label>
+                <input type="email" name="メールアドレス" required />
+
+                <label>ご希望の宅配内容・ご質問</label>
+                <textarea name="宅配希望・質問" rows="5" required></textarea>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" name="同意" required />
+                    <a href="privacy.html" target="_blank">個人情報保護方針</a> に同意する
+                </label>
+
                 <button type="submit">送信する</button>
             </form>
-        </section>
 
-    </main>
 
-    <footer>
-        <p>© 2025 野江ミルクセンター | 配達専門</p>
-    </footer>
+        </main>
 
-    <!-- AOSライブラリ -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-</body>
+        <footer>
+            <p>© 2025 野江ミルクセンター | 配達専門</p>
+        </footer>
+
+        <!-- AOSライブラリ -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+
 </html>
