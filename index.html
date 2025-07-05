@@ -20,9 +20,17 @@
         <header class="navbar">
             <div class="navbar-left">
                 <img src="images/noe-milk-longlogo.png" alt="野江ミルクセンター ロゴ" class="navbar-logo">
+            </div>
+            <nav class="navbar-links">
                 <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
                 <a href="takuhai.html" class="takuhai-btn">宅配について</a>
-
+            </nav>
+            <button class="navbar-toggle" aria-label="メニュー" aria-controls="navbar-menu" aria-expanded="false">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="navbar-menu" id="navbar-menu">
+                <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
+                <a href="takuhai.html" class="takuhai-btn">宅配について</a>
             </div>
         </header>
 
@@ -140,6 +148,7 @@
                     </div>
                 </div>
             </div>
+            </p>
             <div id="modal-daisen" class="modal">
                 <div class="modal-content">
                     <span class="close" onclick="closeModal('modal-daisen')">&times;</span>
@@ -184,6 +193,7 @@
                             (税別)170円 / 380円<br><br>
                             生乳100％使用。
                             乳脂肪分60％カット（普通牛乳に比べ）<br>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -276,6 +286,26 @@
             <p>© 2025 野江ミルクセンター | 配達専門</p>
         </footer>
 
+        <!-- ハンバーガーメニュー用スクリプト -->
+        <script>
+            // ハンバーガーメニュー開閉
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggle = document.querySelector('.navbar-toggle');
+                const menu = document.getElementById('navbar-menu');
+                toggle.addEventListener('click', function () {
+                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', !expanded);
+                    menu.classList.toggle('open');
+                });
+                // メニュークリックで閉じる
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        toggle.setAttribute('aria-expanded', false);
+                        menu.classList.remove('open');
+                    });
+                });
+            });
+        </script>
         <!-- AOSライブラリ -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>

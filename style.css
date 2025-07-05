@@ -1,3 +1,86 @@
+/* --- ハンバーガーメニュー用スタイル --- */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 12px;
+    z-index: 1100;
+}
+
+.navbar-toggle-icon {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #e53935;
+    border-radius: 2px;
+    position: relative;
+}
+
+.navbar-toggle-icon::before,
+.navbar-toggle-icon::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #e53935;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: 0.2s;
+}
+
+.navbar-toggle-icon::before {
+    top: -9px;
+}
+
+.navbar-toggle-icon::after {
+    top: 9px;
+}
+
+.navbar-menu {
+    display: none;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    width: 80vw;
+    max-width: 320px;
+    background: #fff;
+    box-shadow: -2px 2px 16px rgba(0, 0, 0, 0.12);
+    z-index: 1200;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px 20px 20px;
+    gap: 18px;
+    border-radius: 0 0 0 16px;
+}
+
+.navbar-menu.open {
+    display: flex;
+}
+
+.navbar-menu a {
+    width: 100%;
+    margin: 0 0 12px 0;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .navbar-links {
+        display: none !important;
+    }
+
+    .navbar-toggle {
+        display: block !important;
+    }
+
+    .navbar-menu {
+        top: 64px !important;
+    }
+}
+
 ```css @font-face {
     font-family: 'M PLUS Rounded 1c';
     src: url('fonts/MPLUSRounded1c-Regular.woff2') format('woff2');
@@ -464,19 +547,21 @@ body {
         align-items: center !important;
         justify-content: flex-start !important;
         background: #fff !important;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.08) !important;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08) !important;
         width: 100vw !important;
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         z-index: 1000 !important;
     }
+
     .navbar-left {
         display: flex !important;
         align-items: center !important;
         width: 100vw !important;
         gap: 10px !important;
     }
+
     .navbar-logo {
         width: 160px !important;
         max-width: 40vw !important;
@@ -489,6 +574,7 @@ body {
         margin: 0 10px 0 0 !important;
         padding: 0 !important;
     }
+
     .contact-btn,
     .takuhai-btn {
         font-size: 1.05em !important;
@@ -511,14 +597,17 @@ body {
         line-height: 1.2 !important;
         background-clip: padding-box !important;
     }
+
     .contact-btn {
         background: #e53935 !important;
         color: #fff !important;
     }
+
     .takuhai-btn {
         background: #009688 !important;
         color: #fff !important;
     }
+
     main {
         padding-top: 70px !important;
     }
@@ -899,12 +988,15 @@ body {
     .products {
         margin-bottom: 60px !important;
     }
+
     h1 {
         font-size: 2.2em;
     }
+
     h2 {
         font-size: 1.5em;
     }
+
     p,
     a,
     li,
@@ -913,6 +1005,7 @@ body {
     button {
         font-size: 1em;
     }
+
     h1,
     h2,
     h3 {
