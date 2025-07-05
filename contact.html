@@ -225,18 +225,23 @@
                 }
         </style>
 
-    </head>
-
-    <body>
-        <header class="navbar">
-            <div class="navbar-left">
+        <body>
+            <header class="navbar">
                 <a href="index.html">
                     <img src="images/noe-milk-longlogo.png" alt="野江ミルクセンター ロゴ" class="navbar-logo">
                 </a>
-                <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
-                <a href="takuhai.html" class="takuhai-btn">宅配について</a>
-            </div>
-        </header>
+                <nav class="navbar-links">
+                    <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
+                    <a href="takuhai.html" class="takuhai-btn">宅配について</a>
+                </nav>
+                <button class="navbar-toggle" aria-label="メニュー" aria-controls="navbar-menu" aria-expanded="false">
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+                <div class="navbar-menu" id="navbar-menu">
+                    <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
+                    <a href="takuhai.html" class="takuhai-btn">宅配について</a>
+                </div>
+            </header>
 
         <main style="max-width: 500px; margin: 50px auto; padding: 0 20px;">
             <h1>お問い合わせ</h1>
@@ -272,6 +277,29 @@
                 <button type="submit">送信する</button>
             </form>
             <p style="text-align: center; margin-top: 20px;"><a href="index.html">トップページに戻る</a></p>
+            <footer>
+                <p>© 2025 野江ミルクセンター | 配達専門</p>
+            </footer>
+            <!-- ハンバーガーメニュー用スクリプト -->
+            <script>
+                // ハンバーガーメニュー開閉
+                document.addEventListener('DOMContentLoaded', function () {
+                    const toggle = document.querySelector('.navbar-toggle');
+                    const menu = document.getElementById('navbar-menu');
+                    toggle.addEventListener('click', function () {
+                        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                        toggle.setAttribute('aria-expanded', !expanded);
+                        menu.classList.toggle('open');
+                    });
+                    // メニュークリックで閉じる
+                    menu.querySelectorAll('a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            toggle.setAttribute('aria-expanded', false);
+                            menu.classList.remove('open');
+                        });
+                    });
+                });
+            </script>
         </main>
     </body>
 

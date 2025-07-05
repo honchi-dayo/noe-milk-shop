@@ -239,6 +239,54 @@
                     /* 中央揃え */
                 }
 
+                .contact-btn,
+                .takuhai-btn {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    line-height: 1.4;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    box-sizing: border-box;
+                }
+
+                @media screen and (max-width: 600px) {
+
+                    .contact-btn,
+                    .takuhai-btn {
+                        width: 48%;
+                        font-size: 16px;
+                        padding: 12px 0;
+                        white-space: normal;
+                    }
+                }
+
+                .contact-btn,
+                .takuhai-btn {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    line-height: 1.4;
+                    display: inline-block;
+                    text-align: center;
+                }
+
+                .contact-btn,
+                .takuhai-btn {
+                    display: inline-block;
+                    padding: 10px 12px;
+                    font-size: 16px;
+                    line-height: 1.4;
+                    height: 42px;
+                    /* 高さを固定 */
+                    box-sizing: border-box;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+
             }
         </style>
     </head>
@@ -249,6 +297,15 @@
                 <a href="index.html">
                     <img src="images/noe-milk-longlogo.png" alt="野江ミルクセンター ロゴ" class="navbar-logo">
                 </a>
+            </div>
+            <nav class="navbar-links">
+                <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
+                <a href="takuhai.html" class="takuhai-btn">宅配について</a>
+            </nav>
+            <button class="navbar-toggle" aria-label="メニュー" aria-controls="navbar-menu" aria-expanded="false">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="navbar-menu" id="navbar-menu">
                 <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
                 <a href="takuhai.html" class="takuhai-btn">宅配について</a>
             </div>
@@ -342,6 +399,27 @@
         <footer>
             <p>© 2025 野江ミルクセンター | 配達専門</p>
         </footer>
+
+        <!-- ハンバーガーメニュー用スクリプト -->
+        <script>
+            // ハンバーガーメニュー開閉
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggle = document.querySelector('.navbar-toggle');
+                const menu = document.getElementById('navbar-menu');
+                toggle.addEventListener('click', function () {
+                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', !expanded);
+                    menu.classList.toggle('open');
+                });
+                // メニュークリックで閉じる
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        toggle.setAttribute('aria-expanded', false);
+                        menu.classList.remove('open');
+                    });
+                });
+            });
+        </script>
 
         <!-- AOSライブラリ -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
