@@ -14,9 +14,13 @@
                 box-sizing: border-box;
                 font-size: 16px;
             }
-            *, *:before, *:after {
+
+            *,
+            *:before,
+            *:after {
                 box-sizing: inherit;
             }
+
             .navbar {
                 position: fixed;
                 top: 0;
@@ -31,6 +35,7 @@
                 padding: 0 20px;
                 z-index: 1000;
             }
+
             .navbar-logo {
                 height: 40px;
                 width: auto;
@@ -39,6 +44,7 @@
                 margin: 0 10px 0 0;
                 max-width: 350px !important;
             }
+
             .takuhaibox {
                 display: flex;
                 align-items: center;
@@ -48,6 +54,7 @@
                 flex-wrap: wrap;
                 text-align: center;
             }
+
             .milk-img {
                 width: 150px;
                 height: 150px;
@@ -55,21 +62,25 @@
                 display: block;
                 margin: 0 auto;
             }
+
             .milk-text {
                 flex: 1;
                 min-width: 200px;
                 max-width: 500px;
                 text-align: center;
             }
+
             .milk-text p {
                 margin: 5px 0 0;
                 font-size: 16px;
                 color: #555;
                 text-align: center;
             }
+
             .milk-img-yuu {
                 height: 185px;
             }
+
             .contact-form {
                 max-width: 600px;
                 margin: 20px auto;
@@ -77,6 +88,7 @@
                 flex-direction: column;
                 gap: 10px;
             }
+
             .contact-form input,
             .contact-form textarea {
                 padding: 10px;
@@ -85,10 +97,12 @@
                 border-radius: 5px;
                 font-family: "M PLUS Rounded 1c", sans-serif;
             }
+
             .contact-form textarea {
                 min-height: 120px;
                 resize: vertical;
             }
+
             .contact-form button {
                 padding: 12px;
                 background-color: #e74c3c;
@@ -101,13 +115,17 @@
                 transition: background-color 0.3s;
                 font-family: "M PLUS Rounded 1c", sans-serif;
             }
+
             .contact-form button:hover {
                 background-color: #c0392b;
             }
+
             h2 {
                 text-align: center;
             }
-            .contact-btn, .takuhai-btn {
+
+            .contact-btn,
+            .takuhai-btn {
                 color: #fff;
                 padding: 10px 20px;
                 border-radius: 5px;
@@ -122,23 +140,29 @@
                 text-overflow: ellipsis;
                 max-width: 90vw;
             }
+
             .contact-btn {
                 background: #e53935;
             }
+
             .takuhai-btn {
                 background: #009688;
             }
+
             main {
                 padding-top: 20px;
             }
+
             @media (max-width: 600px) {
                 html {
                     font-size: 15px;
                 }
+
                 .navbar {
                     height: 50px;
                     padding: 0 8px;
                 }
+
                 .navbar-logo {
                     width: 140px !important;
                     max-width: 40vw !important;
@@ -150,12 +174,15 @@
                     object-fit: contain !important;
                     display: inline-block !important;
                 }
+
                 .milk-img {
                     width: 150px;
                     height: 150px;
                     object-fit: contain;
                 }
-                .contact-btn, .takuhai-btn {
+
+                .contact-btn,
+                .takuhai-btn {
                     font-size: 0.9em !important;
                     padding: 6px 10px !important;
                     height: 28px !important;
@@ -170,12 +197,14 @@
                     text-overflow: ellipsis !important;
                     max-width: 90vw !important;
                 }
+
                 .takuhaibox {
                     flex-direction: column;
                     align-items: center;
                     gap: 10px;
                     text-align: center;
                 }
+
                 .milk-img {
                     width: 150px;
                     max-width: 80vw;
@@ -183,18 +212,33 @@
                     margin: 0 auto 8px auto;
                     display: block;
                 }
+
                 .milk-text {
                     min-width: 0;
                     max-width: 100vw;
                     text-align: center;
                 }
+
                 .contact-form {
                     max-width: 98vw;
                     padding: 10px;
                 }
+
                 main {
                     padding: 0 2vw !important;
                 }
+
+                .milk-img {
+                    width: 120px;
+                    height: 120px;
+                    /* ← 高さも指定 */
+                    object-fit: contain;
+                    /* ← 縦横比違っても収める */
+                    display: block;
+                    margin: auto;
+                    /* 中央揃え */
+                }
+
             }
         </style>
     </head>

@@ -454,6 +454,76 @@ body {
     }
 }
 
+/* === ヘッダー・ロゴ・ボタンのスマホ用体裁を全ページで強制統一 === */
+@media (max-width: 600px) {
+    .navbar {
+        height: 64px !important;
+        min-height: 64px !important;
+        padding: 0 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        background: #fff !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.08) !important;
+        width: 100vw !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 1000 !important;
+    }
+    .navbar-left {
+        display: flex !important;
+        align-items: center !important;
+        width: 100vw !important;
+        gap: 10px !important;
+    }
+    .navbar-logo {
+        width: 160px !important;
+        max-width: 40vw !important;
+        min-width: 100px !important;
+        height: 48px !important;
+        max-height: 48px !important;
+        min-height: 32px !important;
+        object-fit: contain !important;
+        display: block !important;
+        margin: 0 10px 0 0 !important;
+        padding: 0 !important;
+    }
+    .contact-btn,
+    .takuhai-btn {
+        font-size: 1.05em !important;
+        font-weight: bold !important;
+        padding: 10px 18px !important;
+        height: 44px !important;
+        min-width: 110px !important;
+        max-width: 38vw !important;
+        width: auto !important;
+        margin-left: 6px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        border-radius: 8px !important;
+        letter-spacing: 0.01em !important;
+        line-height: 1.2 !important;
+        background-clip: padding-box !important;
+    }
+    .contact-btn {
+        background: #e53935 !important;
+        color: #fff !important;
+    }
+    .takuhai-btn {
+        background: #009688 !important;
+        color: #fff !important;
+    }
+    main {
+        padding-top: 70px !important;
+    }
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -825,64 +895,28 @@ body {
         padding: 0 !important;
     }
 
-    /* スマホ時：ロゴを大きく、ボタンを小さく（サイズをほぼ入れ替え） */
-    @media (max-width: 600px) {
-        .navbar {
-            flex-direction: row;
-            height: 50px;
-            padding: 0 8px;
-        }
-        .navbar-left {
-            flex-direction: row;
-            align-items: center;
-        }
-    .navbar-logo {
-        width: 140px !important;
-        max-width: 40vw !important;
-        height: 40px !important;
-        min-width: 80px !important;
-        min-height: 0 !important;
-        padding: 0 !important;
-        margin-right: 8px !important;
-        object-fit: contain !important;
-        display: inline-block !important;
+    /* スマホ時：ロゴ・ボタン等の競合指定を削除（強制統一ブロックのみ有効化） */
+    .products {
+        margin-bottom: 60px !important;
     }
-    .contact-btn, .takuhai-btn {
-        font-size: 0.9em !important;
-        padding: 6px 10px !important;
-        height: 28px !important;
-        line-height: 1.1 !important;
-        min-width: 60px !important;
-        width: auto !important;
-        margin-left: 6px !important;
-        display: inline-block !important;
-        box-sizing: border-box !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        max-width: 90vw !important;
+    h1 {
+        font-size: 2.2em;
     }
-        .products {
-            margin-bottom: 60px !important;
-        }
-        h1 {
-            font-size: 2.2em;
-        }
-        h2 {
-            font-size: 1.5em;
-        }
-        p,
-        a,
-        li,
-        input,
-        textarea,
-        button {
-            font-size: 1em;
-        }
-        h1,
-        h2,
-        h3 {
-            margin: 0 0 10px;
-            font-weight: bold;
-        }
+    h2 {
+        font-size: 1.5em;
     }
+    p,
+    a,
+    li,
+    input,
+    textarea,
+    button {
+        font-size: 1em;
+    }
+    h1,
+    h2,
+    h3 {
+        margin: 0 0 10px;
+        font-weight: bold;
+    }
+}
