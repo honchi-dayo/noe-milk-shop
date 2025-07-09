@@ -74,11 +74,17 @@
 
     .navbar-toggle {
         display: block !important;
+        background: none !important;
     }
 
     .navbar-menu {
         top: 64px !important;
+        width: 100vw !important;
+        max-width: 600px !important;
     }
+}
+
+
 }
 
 @font-face {
@@ -1102,8 +1108,8 @@ body {
     box-shadow: 0 2px 16px rgba(0,0,0,0.12) !important;
   }
   .navbar-menu a {
-    min-width: 120px !important;
-    width: 100% !important;
+    min-width: 100px !important;
+    width: 80% !important;
     font-size: 1em !important;
     text-align: center !important;
     padding: 14px 0 !important;
