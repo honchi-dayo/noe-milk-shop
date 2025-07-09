@@ -81,7 +81,7 @@
     }
 }
 
-```css @font-face {
+@font-face {
     font-family: 'M PLUS Rounded 1c';
     src: url('fonts/MPLUSRounded1c-Regular.woff2') format('woff2');
     font-weight: 400;
@@ -582,10 +582,10 @@ a.takuhai-btn:hover {
     }
 
     .navbar-menu a {
-        min-width: 220px !important;
+        min-width: 200px !important;
         max-width: 100% !important;
         width: 100% !important;
-        font-size: 1.25em !important;
+        font-size: 1em !important;
         text-align: center !important;
         padding: 18px 0 !important;
         margin: 0 0 24px 0 !important;
@@ -1104,7 +1104,7 @@ body {
   .navbar-menu a {
     min-width: 120px !important;
     width: 100% !important;
-    font-size: 1.1em !important;
+    font-size: 1em !important;
     text-align: center !important;
     padding: 14px 0 !important;
     margin: 0 0 16px 0 !important;
