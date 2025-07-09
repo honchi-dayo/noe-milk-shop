@@ -1058,71 +1058,7 @@ body {
 
 @media (max-width: 600px) {
 
-  /* ① 毎朝新鮮な牛乳をお届けします～画像の空白調整 */
-  .hero {
-    padding-bottom: 0 !important;
-  }
-  .hero .hero-img,
-  .hero-img {
-    margin-bottom: 0 !important;
-  }
-  .hero-text {
-    margin-bottom: 10px !important;
-  }
-
-  /* ② 画像と「私たちについて」の間隔を広げる */
-  .hero-img {
-    margin-bottom: 18vw !important;
-  }
-
-  /* ③ お問い合わせボタン中央揃え */
-  .contact-btn,
-  .tel-btn {
-    display: block !important;
-    margin: 18px auto !important;
-    text-align: center !important;
-    width: 95vw !important;
-    max-width: 350px !important;
-    min-width: 160px !important;
-    font-size: 1.1em !important;
-    font-weight: bold !important;
-    border-radius: 10px !important;
-    box-sizing: border-box !important;
-  }
-
-  /* ④ ハンバーガーメニューのボタンサイズ調整 */
-  .navbar-toggle-icon,
-  .hamburger-icon {
-    width: 24px !important;
-    height: 24px !important;
-  }
-  .navbar-toggle-icon::before,
-  .navbar-toggle-icon::after {
-    width: 24px !important;
-  }
-
-  /* ⑤ 宅配についての画像中央揃え */
-  .takuhai-illusts {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100%;
-    text-align: center;
-    gap: 8px;
-  }
-  .takuhai-illusts img {
-    margin: 0 8px !important;
-    width: 54px !important;
-    max-width: 18vw !important;
-    height: auto !important;
-    display: inline-block !important;
-    vertical-align: middle;
-  }
-
-  /* ⑥ 夕配達画像だけ小さい問題を修正（同じサイズに統一） */
-  /* 上記で全てのimgに統一サイズを指定 */
-
-  /* ⑦ ハンバーガーメニュー・ロゴ体裁をindex.htmlと統一 */
+  /* ヘッダー・ロゴ・メニュー */
   .navbar {
     height: 60px !important;
     min-height: 60px !important;
@@ -1142,7 +1078,15 @@ body {
     width: 110px !important;
     max-width: 40vw !important;
     margin-bottom: 0 !important;
-    height: auto !important;
+    height: 40px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+  .navbar-links { display: none !important; }
+  .navbar-toggle { display: block !important; }
+  .navbar-toggle-icon, .hamburger-icon {
+    width: 24px !important;
+    height: 24px !important;
   }
   .navbar-menu {
     width: 100vw !important;
@@ -1150,23 +1094,99 @@ body {
     min-width: 220px !important;
     left: 0 !important;
     right: 0 !important;
-    padding-left: 32px !important;
-    padding-right: 32px !important;
-    padding-top: 32px !important;
-    padding-bottom: 32px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
     border-radius: 0 0 0 16px !important;
     box-shadow: 0 2px 16px rgba(0,0,0,0.12) !important;
   }
   .navbar-menu a {
-    min-width: 220px !important;
-    max-width: 100% !important;
+    min-width: 120px !important;
     width: 100% !important;
-    font-size: 1.25em !important;
+    font-size: 1.1em !important;
     text-align: center !important;
-    padding: 18px 0 !important;
-    margin: 0 0 24px 0 !important;
-    box-sizing: border-box !important;
+    padding: 14px 0 !important;
+    margin: 0 0 16px 0 !important;
     border-radius: 10px !important;
+    display: block !important;
+  }
+
+  /* ボタン */
+  .contact-btn, .takuhai-btn, .tel-btn {
+    display: block !important;
+    margin: 18px auto !important;
+    text-align: center !important;
+    width: 95vw !important;
+    max-width: 350px !important;
+    min-width: 120px !important;
+    font-size: 1.1em !important;
+    font-weight: bold !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  /* main余白 */
+  main {
+    padding: 0 2vw !important;
+    padding-top: 70px !important;
+  }
+
+  /* ヒーロー画像の下余白調整 */
+  .hero-img {
+    margin-bottom: 18vw !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 宅配イラストボックス */
+  .takuhaibox {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-align: center !important;
+    margin: 16px 0 !important;
+  }
+  .milk-img, .milk-img-yuu {
+    width: 120px !important;
+    height: 120px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 8px auto !important;
+  }
+  .milk-text {
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    text-align: center !important;
+  }
+
+  /* フォーム */
+  .contact-form {
+    max-width: 98vw !important;
+    padding: 10px !important;
+  }
+
+  /* 商品カード */
+  .product-grid {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  .product-card {
+    width: 90vw !important;
+    padding: 12px 6px !important;
+  }
+  .product-card img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .modal-content {
+    padding: 10px !important;
   }
 
   /* スワイパー下の空白をなくす */
@@ -1185,16 +1205,10 @@ body {
     padding-bottom: 0 !important;
   }
   .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: auto;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
     margin: 0 !important;
     padding: 0 !important;
-  }
-
-  /* main余白調整 */
-  main {
-    padding-top: 90px !important;
-    padding-bottom: 10px !important;
   }
 }
