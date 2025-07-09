@@ -326,12 +326,6 @@ a.takuhai-btn:hover {
     color: #ffffff !important;
 }
 
-
-body {
-    padding-top: 100px;
-    /* ナビバー分の余白を追加 */
-}
-
 .navbar-logo {
     height: auto !important;
     /* 高さを自動で比率維持 */
@@ -1035,5 +1029,17 @@ body {
     h3 {
         margin: 0 0 10px;
         font-weight: bold;
+    }
+}
+
+body {
+    padding-top: 100px !important;
+    /* ナビバー分の余白を追加 */
+}
+
+@media screen and (max-width: 600px){
+    .navbar-links.active a {
+        font-size: 16px !important;  /* 小さめに調整 */
+        padding: 10px 0 !important;  /* 上下の余白 */
     }
 }
