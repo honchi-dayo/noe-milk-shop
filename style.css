@@ -1055,3 +1055,112 @@ body {
   margin: 0 auto !important;
 }
 }
+
+/* ① 毎朝新鮮な牛乳をお届けします～画像の空白調整 */
+.hero {
+    padding-bottom: 0 !important;
+}
+.hero .hero-img,
+.hero-img {
+    margin-bottom: 0 !important;
+}
+.hero-text {
+    margin-bottom: 10px !important;
+}
+
+/* ② 画像と「私たちについて」の間隔を広げる */
+.hero-img {
+    margin-bottom: 24px !important;
+}
+@media (max-width: 600px) {
+    .hero-img {
+        margin-bottom: 18vw !important;
+    }
+}
+
+/* ③ お問い合わせボタン中央揃え */
+.contact-btn,
+.tel-btn {
+    display: block !important;
+    margin: 24px auto !important;
+    text-align: center !important;
+    width: 90% !important;
+    max-width: 350px !important;
+}
+@media (max-width: 600px) {
+    .contact-btn,
+    .tel-btn {
+        width: 95vw !important;
+        max-width: 350px !important;
+        margin: 18px auto !important;
+    }
+}
+
+/* ④ ハンバーガーメニューのボタンサイズ調整 */
+.hamburger-icon {
+    width: 26px !important;
+    height: 26px !important;
+}
+@media (max-width: 600px) {
+    .hamburger-icon {
+        width: 24px !important;
+        height: 24px !important;
+    }
+}
+
+/* ⑤ 宅配についての画像中央揃え */
+.takuhai-illusts,
+.takuhai-illusts img {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    text-align: center;
+}
+.takuhai-illusts img {
+    margin: 0 12px !important;
+}
+
+/* ⑥ 夕配達画像だけ小さい問題を修正（同じサイズに統一） */
+.takuhai-illusts img {
+    width: 70px !important;
+    height: auto !important;
+    max-width: 22vw !important;
+}
+@media (max-width: 600px) {
+    .takuhai-illusts img {
+        width: 54px !important;
+        max-width: 18vw !important;
+    }
+}
+
+/* ⑦ ハンバーガーメニューの体裁をindex.htmlと統一 */
+.navbar {
+    height: 70px !important;
+    min-height: 70px !important;
+    padding: 0 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    background: #fff !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08) !important;
+    width: 100vw !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1000 !important;
+}
+@media (max-width: 600px) {
+    .navbar {
+        height: 60px !important;
+        min-height: 60px !important;
+        padding: 0 8px !important;
+    }
+    .navbar-logo {
+        width: 110px !important;
+        max-width: 40vw !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+/* 必要に応じて .navbar-menu などもindex.htmlと同じ指定に */
