@@ -1037,9 +1037,21 @@ body {
     /* ナビバー分の余白を追加 */
 }
 
+@media screen and (max-width: 600px) {
+  .hamburger-icon {
+    width: 30px;   /* 小さく */
+    height: 30px;  /* 小さく */
+  }
+}
+
 @media screen and (max-width: 600px){
-    .navbar-links.active a {
-        font-size: 16px !important;  /* 小さめに調整 */
-        padding: 10px 0 !important;  /* 上下の余白 */
-    }
+.hero h2 {
+  margin-bottom: 0 !important; /* 不要なマージンを削る */
+}
+
+.hero img {
+  display: block !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
 }
