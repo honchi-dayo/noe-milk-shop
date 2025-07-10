@@ -1717,7 +1717,7 @@ body {
       margin-right: 10px !important;
       background: none !important;
       border: none !important;
-      padding: 10px !important;
+      padding: 3px !important;
   }
   .navbar-toggle-icon {
       width: 24px !important;
@@ -1732,7 +1732,7 @@ body {
   /* ② お問い合わせ・宅配についてボタン縦サイズアップ */
   .contact-btn,
   .takuhai-btn {
-      padding: 16px 24px !important;
+      padding: 20px 24px !important;
       font-size: 1.2em !important;
       width: 90% !important;
       max-width: 350px !important;
@@ -1789,7 +1789,7 @@ body {
     .milk-img-yuu {
         display: block !important;
         margin: 0 auto 10px auto !important;
-        max-width: 120px !important;   /* サイズを統一 */
+        max-width: 100px !important;   /* サイズを統一 */
         height: auto !important;
     }
 
@@ -1808,6 +1808,12 @@ body {
         display: block !important;
         margin-left: auto !important;
         margin-right: auto !important;
+    }
+
+    .contact-btn,
+    .takuhai-btn,
+    .call-btn {
+        padding: 24px 24px !important;
     }
 }
 
