@@ -5,11 +5,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>宅配について | 野江ミルクセンター</title>
+        <!-- Favicon -->
         <link rel="icon" type="image/png" href="images/noe-milk-logo.png">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap"
             rel="stylesheet">
+        <!-- AOSライブラリでスクロール時ふわっと動かす -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     </head>
+
+    <style>
+body,
+p,
+a,
+li,
+input,
+textarea,
+button {
+    font-size: 18px !important; /* 元:16~17px → 18px */
+    line-height: 1.7 !important;
+}
+
+h1 {
+    font-size: 2em !important;
+}
+
+h2 {
+    font-size: 1.6em !important;
+}
+
+h3 {
+    font-size: 1.3em !important;
+}
+
+</style>
 
     <body>
         <header class="navbar">
@@ -50,70 +81,43 @@
             </section>
 
             <!-- 宅配のメリット -->
-            <section class="takuhai-merit" data-aos="fade-up">
-                <h2>宅配について</h2>
-                <ul>
-                    <img src="images/asahiruyuu.png" alt="宅配朝昼夕" style="max-width: 100%; height: auto; margin: 20px 0;">
-                    <div class="flow-step">
+<!-- 宅配について -->
+<section class="takuhai-merit" data-aos="fade-up">
+    <h2>宅配について</h2>
 
-                        <div class="takuhaibox">
-                            <img src="images/asa.jpeg" alt="牛乳配達朝イラスト" class="milk-img">
-                            <div class="milk-text">
-                                <h3>朝配達</h3>
-                                <p>朝に牛乳を飲みたい方に</p>
-                            </div>
-                        </div>
+    <img src="images/asahiruyuu.png" alt="宅配朝昼夕" style="max-width: 100%; height: auto; margin: 20px auto; display: block;">
 
-                        <div class="takuhaibox">
-                            <img src="images/hiru.jpeg" alt="牛乳配達昼イラスト" class="milk-img">
-                            <div class="milk-text">
-                                <h3>昼配達</h3>
-                                <p>朝はゆっくりしたい方、朝が忙しい方に</p>
-                            </div>
-                        </div>
+    <div class="takuhaibox">
+        <img src="images/asa.jpeg" alt="牛乳配達朝イラスト" class="milk-img">
+        <div class="milk-text">
+            <h3>朝配達</h3>
+            <p>朝に牛乳を飲みたい方に</p>
+        </div>
+    </div>
 
-                        <div class="takuhaibox">
-                            <img src="images/yuu.jpeg" alt="牛乳配達夕イラスト" class="milk-img milk-img-yuu">
-                            <div class="milk-text">
-                                <h3>夕方配達</h3>
-                                <p>お風呂あがりに飲みたい方に</p>
-                            </div>
-                        </div>
-                        <h3>お客様の生活に合わせてお届けします。</h3>
-                </ul>
-            </section>
+    <div class="takuhaibox">
+        <img src="images/hiru.jpeg" alt="牛乳配達昼イラスト" class="milk-img">
+        <div class="milk-text">
+            <h3>昼配達</h3>
+            <p>朝はゆっくりしたい方、朝が忙しい方に</p>
+        </div>
+    </div>
+
+    <div class="takuhaibox">
+        <img src="images/yuu.jpeg" alt="牛乳配達夕イラスト" class="milk-img milk-img-yuu">
+        <div class="milk-text">
+            <h3>夕方配達</h3>
+            <p>お風呂あがりに飲みたい方に</p>
+        </div>
+    </div>
+
+    <h3>お客様の生活に合わせてお届けします。</h3>
+</section>
+
 
             <!-- 申し込みフォーム -->
             <h2>宅配のお申し込み</h2>
-            <form class="contact-form" action="https://formspree.io/f/xpwrbvdo" method="POST">
-                <input type="hidden" name="_subject" value="【野江ミルクセンター】宅配申し込みフォームからのお問い合わせ">
-                <label>お名前</label>
-                <input type="text" name="お名前" required />
-
-                <label>郵便番号</label>
-                <input type="text" name="郵便番号" required />
-
-                <label>住所</label>
-                <input type="text" name="住所" required />
-
-                <label>電話番号</label>
-                <input type="tel" name="電話番号" required />
-
-                <label>メールアドレス</label>
-                <input type="email" name="メールアドレス" required />
-
-                <label>ご希望の宅配内容・ご質問</label>
-                <textarea name="宅配希望・質問" rows="5" required></textarea>
-
-                <label class="checkbox-label">
-                    <input type="checkbox" name="同意" required />
-                    <a href="privacy.html" target="_blank">個人情報保護方針</a> に同意する
-                </label>
-
-                <button type="submit">送信する</button>
-            </form>
-
-
+        <p style="text-align: center; margin-top: 40px;"><a href="contact.html" class="contact-btn">お申込みはこちら</a></p>
         </main>
 
         <footer>

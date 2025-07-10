@@ -1711,8 +1711,6 @@ body {
                 background-color: #ffffff !important;
                 }
 
-@media (max-width: 600px) {
-
   /* ① ハンバーガーメニュー右詰め、三本線のみ表示 */
   .navbar-toggle {
       margin-left: auto !important;
@@ -1770,18 +1768,46 @@ body {
       text-align: center !important;
   }
 
-  /* ⑤ 宅配についての画像を中央揃え */
-  .delivery-section img { /* 親クラスに合わせて変更 */
-      display: block !important;
-      margin: 0 auto !important;
-      max-width: 120px !important; /* 全画像サイズ統一 */
-      height: auto !important;
-  }
+    /* 朝昼夕の大バナー画像を中央揃え */
+    .takuhai-merit img[alt="宅配朝昼夕"] {
+        display: block !important;
+        margin: 0 auto 16px auto !important;
+        max-width: 90% !important;
+        height: auto !important;
+    }
 
-  /* ⑥ 夕方配達画像だけサイズを揃える場合（必要な場合のみ） */
-.takuhaibox img {
-  width: 150px;   /* 画像の幅を統一 */
-  height: auto;
+    /* 配達時間帯イラスト中央揃え・サイズ統一 */
+    .takuhaibox {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    .milk-img,
+    .milk-img-yuu {
+        display: block !important;
+        margin: 0 auto 10px auto !important;
+        max-width: 120px !important;   /* サイズを統一 */
+        height: auto !important;
+    }
+
+    .milk-text {
+        text-align: center !important;
+    }
+
+    /* 下部「お客様の生活に合わせて～」の見出し中央 */
+    .takuhai-merit h3 {
+        text-align: center !important;
+        font-size: 1.1em !important;
+        margin-top: 12px !important;
+    }
+
+    img[alt="宅配朝昼夕"] {
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
 }
 
-}
