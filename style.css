@@ -1710,3 +1710,78 @@ body {
                 .panel {
                 background-color: #ffffff !important;
                 }
+
+@media (max-width: 600px) {
+
+  /* ① ハンバーガーメニュー右詰め、三本線のみ表示 */
+  .navbar-toggle {
+      margin-left: auto !important;
+      margin-right: 10px !important;
+      background: none !important;
+      border: none !important;
+      padding: 10px !important;
+  }
+  .navbar-toggle-icon {
+      width: 24px !important;
+      height: 3px !important;
+  }
+  .navbar-toggle-icon::before,
+  .navbar-toggle-icon::after {
+      width: 24px !important;
+      height: 3px !important;
+  }
+
+  /* ② お問い合わせ・宅配についてボタン縦サイズアップ */
+  .contact-btn,
+  .takuhai-btn {
+      padding: 16px 24px !important;
+      font-size: 1.2em !important;
+      width: 90% !important;
+      max-width: 350px !important;
+      display: block !important;
+      margin: 12px auto !important;
+      text-align: center !important;
+  }
+
+  /* ③ ハンバーガーメニュー開いた時の表示を小さく */
+  .navbar-menu {
+      width: 80vw !important;
+      max-width: 280px !important;
+      padding: 16px !important;
+  }
+  .navbar-menu a {
+      padding: 10px 0 !important;
+      font-size: 0.95em !important;
+      margin: 0 0 10px 0 !important;
+      display: block !important;
+      text-align: center !important;
+  }
+
+  /* ④ 電話するボタンを大きく */
+  .call-btn, /* ボタンに適用しているクラス名に合わせて変更 */
+  .contact-btn.call-btn {
+      padding: 16px 32px !important;
+      font-size: 1.3em !important;
+      border-radius: 12px !important;
+      width: 90% !important;
+      max-width: 300px !important;
+      display: block !important;
+      margin: 20px auto !important;
+      text-align: center !important;
+  }
+
+  /* ⑤ 宅配についての画像を中央揃え */
+  .delivery-section img { /* 親クラスに合わせて変更 */
+      display: block !important;
+      margin: 0 auto !important;
+      max-width: 120px !important; /* 全画像サイズ統一 */
+      height: auto !important;
+  }
+
+  /* ⑥ 夕方配達画像だけサイズを揃える場合（必要な場合のみ） */
+.takuhaibox img {
+  width: 150px;   /* 画像の幅を統一 */
+  height: auto;
+}
+
+}
