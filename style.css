@@ -9,6 +9,20 @@
     z-index: 1100;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* ← 左寄せに変更 */
+}
+
+.navbar-left {
+    flex: 1; /* ← 左側が可変幅で右側を押し出す */
+}
+
+.navbar-toggle {
+    margin-left: auto; /* ← 自然に右端へ寄る */
+}
+
 .navbar-toggle-icon {
     display: block;
     width: 28px;
@@ -82,9 +96,6 @@
         width: 100vw !important;
         max-width: 600px !important;
     }
-}
-
-
 }
 
 @font-face {
@@ -599,28 +610,29 @@ a.takuhai-btn:hover {
         border-radius: 10px !important;
     }
 
-    .contact-btn,
-    .takuhai-btn {
-        font-size: 1.15em !important;
-        font-weight: bold !important;
-        padding: 14px 24px !important;
-        height: 54px !important;
-        min-width: 140px !important;
-        max-width: 60vw !important;
-        width: auto !important;
-        margin-left: 10px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-sizing: border-box !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        border-radius: 10px !important;
-        letter-spacing: 0.01em !important;
-        line-height: 1.2 !important;
-        background-clip: padding-box !important;
-    }
+.contact-btn,
+.takuhai-btn {
+    font-size: 1.15em !important;
+    font-weight: bold !important;
+    padding: 20px 24px !important;          /* 縦幅調整はpaddingで */
+    min-width: 140px !important;
+    max-width: 90vw !important;
+    width: 90% !important;
+    margin: 12px auto !important;           /* 中央寄せ */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    border-radius: 10px !important;
+    letter-spacing: 0.01em !important;
+    line-height: 1.2 !important;
+    background-clip: padding-box !important;
+    text-align: center !important;
+    white-space: normal !important;         /* 折り返し可能にする */
+    overflow: visible !important;           /* はみ出し許可 */
+    text-overflow: clip !important;         /* 省略しない */
+}
+
 
     .contact-btn {
         background: #e53935 !important;
@@ -1788,22 +1800,12 @@ body {
 /* ===== 夕方配達キャラクター画像のサイズ統一 ===== */
 
 img[alt="牛乳配達夕イラスト"] {
-    width: 150px !important;
+    width: 70px !important;
     height: auto !important;
     display: block !important;
     margin: 0 auto 16px auto !important;
     object-fit: contain !important;
 }
-
-/* もし alt 属性が異なる場合はクラス名付与推奨 */
-.evening-delivery-img {
-    width: 150px !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto 16px auto !important;
-    object-fit: contain !important;
-}
-
 
     .milk-text {
         text-align: center !important;
