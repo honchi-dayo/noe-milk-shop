@@ -1785,13 +1785,25 @@ body {
         margin-bottom: 20px !important;
     }
 
-    .milk-img,
-    .milk-img-yuu {
-        display: block !important;
-        margin: 0 auto 10px auto !important;
-        max-width: 30px !important;   /* サイズを統一 */
-        height: 50px !important;
-    }
+/* ===== 夕方配達キャラクター画像のサイズ統一 ===== */
+
+img[alt="牛乳配達夕イラスト"] {
+    width: 150px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 16px auto !important;
+    object-fit: contain !important;
+}
+
+/* もし alt 属性が異なる場合はクラス名付与推奨 */
+.evening-delivery-img {
+    width: 150px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 16px auto !important;
+    object-fit: contain !important;
+}
+
 
     .milk-text {
         text-align: center !important;
@@ -1813,7 +1825,7 @@ body {
     .contact-btn,
     .takuhai-btn,
     .call-btn {
-        padding: 50px 24px !important;
+        padding: 30px 24px !important;
     }
 
     .navbar {
@@ -1837,6 +1849,47 @@ body {
         display: none !important;     /* ← スマホでは非表示 */
     }
 }
+
+/* ===== 確実に反映させる修正ブロック ===== */
+
+/* ハンバーガーメニュー右詰め */
+@media (max-width: 600px) {
+  .navbar {
+    display: flex !important;
+    justify-content: space-between !important; /* 左ロゴ / 右メニュー */
+    align-items: center !important;
+    padding: 0 10px !important;
+  }
+
+  .navbar-left {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .navbar-toggle {
+    order: 2 !important;    /* flex順で右端 */
+    margin: 0 !important;   /* 余計なマージン削除 */
+    padding: 10px !important;
+    background: none !important;
+    border: none !important;
+    display: block !important;
+  }
+}
+
+/* ボタン縦幅アップ（文字がしっかり見えるサイズに） */
+.contact-btn,
+.takuhai-btn,
+.call-btn {
+    padding: 18px 24px !important;
+    font-size: 1.2em !important;
+    border-radius: 10px !important;
+    width: 90% !important;
+    max-width: 350px !important;
+    display: block !important;
+    margin: 12px auto !important;
+    text-align: center !important;
+}
+
 
 
 
