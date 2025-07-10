@@ -1789,7 +1789,7 @@ body {
     .milk-img-yuu {
         display: block !important;
         margin: 0 auto 10px auto !important;
-        max-width: 100px !important;   /* サイズを統一 */
+        max-width: 70px !important;   /* サイズを統一 */
         height: auto !important;
     }
 
@@ -1813,7 +1813,28 @@ body {
     .contact-btn,
     .takuhai-btn,
     .call-btn {
-        padding: 24px 24px !important;
+        padding: 30px 24px !important;
     }
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    display: flex !important;
+    justify-content: space-between !important;   /* ← 左右に分離させる */
+    align-items: center !important;
+    padding: 0 12px !important;                  /* 必要に応じて余白調整 */
+  }
+
+  .navbar-left {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .navbar-toggle {
+    margin-left: 0 !important;                  /* ← 左寄せの無効化 */
+    margin-right: 0 !important;                 /* ← 必要に応じて微調整 */
+    padding: 10px !important;
+  }
+}
+
 
