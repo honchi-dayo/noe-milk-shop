@@ -1,155 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宅配について | 野江ミルクセンター</title>
+  <link rel="icon" type="image/png" href="images/noe-milk-logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" aria-label="トップへ">
+      <img src="images/noe-milk-longlogo.png" alt="野江ミルクセンター ロゴ" class="navbar-logo">
+    </a>
+    <button class="navbar-toggle" aria-label="メニュー" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="navbar-toggle-icon"></span>
+    </button>
+    <nav class="navbar-menu" id="navbar-menu">
+      <a href="contact.html" class="contact-btn">お問い合わせ</a>
+    </nav>
+  </header>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>宅配について | 野江ミルクセンター</title>
-        <!-- Favicon -->
-        <link rel="icon" type="image/png" href="images/noe-milk-logo.png">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap"
-            rel="stylesheet">
-        <!-- AOSライブラリでスクロール時ふわっと動かす -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <!-- Swiper CSS -->
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    </head>
+  <main class="container">
+    <section class="hero-static" aria-hidden="true">
+      <img src="images/top-banner3.jpg" alt="宅配イメージ" class="hero-img">
+    </section>
 
-    <style>
-body,
-p,
-a,
-li,
-input,
-textarea,
-button {
-    font-size: 18px !important; /* 元:16~17px → 18px */
-    line-height: 1.7 !important;
-}
+    <section data-aos="fade-up">
+      <h2>宅配の流れ</h2>
+      <img src="images/takuhai-0.png" alt="宅配の流れ" class="full-img">
+    </section>
 
-h1 {
-    font-size: 2em !important;
-}
-
-h2 {
-    font-size: 1.6em !important;
-}
-
-h3 {
-    font-size: 1.3em !important;
-}
-
-</style>
-
-    <body>
-        <header class="navbar">
-            <div class="navbar-left">
-                <a href="index.html">
-                    <img src="images/noe-milk-longlogo.png" alt="野江ミルクセンター ロゴ" class="navbar-logo">
-                </a>
-            </div>
-            <nav class="navbar-links">
-                <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
-                <a href="takuhai.html" class="takuhai-btn">宅配について</a>
-            </nav>
-            <button class="navbar-toggle" aria-label="メニュー" aria-controls="navbar-menu" aria-expanded="false">
-                <span class="navbar-toggle-icon"></span>
-            </button>
-            <div class="navbar-menu" id="navbar-menu">
-                <a href="contact.html" class="contact-btn">お問い合わせはこちら</a>
-                <a href="takuhai.html" class="takuhai-btn">宅配について</a>
-            </div>
-        </header>
-
-        <main>
-            <!-- バナー表示 -->
-            <section class="hero">
-                <img src="images/top-banner3.jpg" alt="宅配イメージバナー" class="hero-img">
-            </section>
-
-            <!-- 宅配の流れ -->
-            <section class="takuhai-flow" data-aos="fade-up">
-                <h2>宅配の流れ</h2>
-                <div class="flow-steps">
-                    <div class="flow-step">
-                        <img src="images/takuhai-0.png" alt="宅配の流れ"
-                            style="max-width: 100%; height: auto; margin: 20px 0;">
-                        <div class="flow-step">
-                        </div>
-                    </div>
-            </section>
-
-            <!-- 宅配のメリット -->
-<!-- 宅配について -->
-<section class="takuhai-merit" data-aos="fade-up">
-    <h2>宅配について</h2>
-
-    <img src="images/asahiruyuu.png" alt="宅配朝昼夕" style="max-width: 100%; height: auto; margin: 20px auto; display: block;">
-
-    <div class="takuhaibox">
-        <img src="images/asa.jpeg" alt="牛乳配達朝イラスト" class="milk-img">
-        <div class="milk-text">
-            <h3>朝配達</h3>
-            <p>朝に牛乳を飲みたい方に</p>
+    <section data-aos="fade-up">
+      <h2>お届け時間</h2>
+      <img src="images/asahiruyuu.png" alt="朝・昼・夕のお届け" class="full-img">
+      <div class="takuhaibox">
+        <div class="milk">
+          <img src="images/asa.jpeg" alt="朝配達" class="milk-img">
+          <p>朝に牛乳を飲みたい方に</p>
         </div>
-    </div>
-
-    <div class="takuhaibox">
-        <img src="images/hiru.jpeg" alt="牛乳配達昼イラスト" class="milk-img">
-        <div class="milk-text">
-            <h3>昼配達</h3>
-            <p>朝はゆっくりしたい方、朝が忙しい方に</p>
+        <div class="milk">
+          <img src="images/hiru.jpeg" alt="昼配達" class="milk-img">
+          <p>朝はゆっくりしたい方、朝が忙しい方に</p>
         </div>
-    </div>
-
-    <div class="takuhaibox">
-        <img src="images/yuu.jpeg" alt="牛乳配達夕イラスト" class="milk-img milk-img-yuu">
-        <div class="milk-text">
-            <h3>夕方配達</h3>
-            <p>お風呂あがりに飲みたい方に</p>
+        <div class="milk">
+          <img src="images/yuu.jpeg" alt="夕配達" class="milk-img milk-img-yuu">
+          <p>お風呂あがりに飲みたい方に</p>
         </div>
-    </div>
+      </div>
+      <h3 class="center">お客様の生活に合わせてお届けします。</h3>
+    </section>
 
-    <h3>お客様の生活に合わせてお届けします。</h3>
-</section>
+    <section data-aos="fade-up">
+      <h2>宅配のお申し込み</h2>
+      <form class="contact-form" action="https://formspree.io/f/xpwrbvdo" method="POST">
+        <input type="hidden" name="_subject" value="【野江ミルクセンター】宅配申し込み">
+        <label>お名前<input type="text" name="お名前" required></label>
+        <label>郵便番号<input type="text" name="郵便番号" required></label>
+        <label>住所<input type="text" name="住所" required></label>
+        <label>電話番号<input type="tel" name="電話番号" required></label>
+        <label>メールアドレス<input type="email" name="メールアドレス" required></label>
+        <label>ご希望・ご質問<textarea name="宅配希望・質問" rows="5" required></textarea></label>
+        <label class="checkbox"><input type="checkbox" name="同意" required> <a href="privacy.html" target="_blank">個人情報保護方針</a>に同意する</label>
+        <button type="submit" class="btn-primary">送信する</button>
+      </form>
+    </section>
+  </main>
 
+  <footer>
+    <p>© 2025 野江ミルクセンター | 配達専門</p>
+  </footer>
 
-            <!-- 申し込みフォーム -->
-            <h2>宅配のお申し込み</h2>
-        <p style="text-align: center; margin-top: 40px;"><a href="contact.html" class="contact-btn">お申込みはこちら</a></p>
-        </main>
-
-        <footer>
-            <p>© 2025 野江ミルクセンター | 配達専門</p>
-        </footer>
-
-        <!-- ハンバーガーメニュー用スクリプト -->
-        <script>
-            // ハンバーガーメニュー開閉
-            document.addEventListener('DOMContentLoaded', function () {
-                const toggle = document.querySelector('.navbar-toggle');
-                const menu = document.getElementById('navbar-menu');
-                toggle.addEventListener('click', function () {
-                    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-                    toggle.setAttribute('aria-expanded', !expanded);
-                    menu.classList.toggle('open');
-                });
-                // メニュークリックで閉じる
-                menu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        toggle.setAttribute('aria-expanded', false);
-                        menu.classList.remove('open');
-                    });
-                });
-            });
-        </script>
-
-        <!-- AOSライブラリ -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-    </body>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.navbar-toggle');
+      const menu = document.getElementById('navbar-menu');
+      toggle.addEventListener('click', () => menu.classList.toggle('open'));
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+    });
+  </script>
+</body>
 </html>
