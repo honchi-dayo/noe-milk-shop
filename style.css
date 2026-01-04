@@ -211,9 +211,6 @@ main {
 
 main>*:not(header):not(.navbar) {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 section {
@@ -318,25 +315,28 @@ section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
 }
 
-.contact-form label {
+.contact-form label.checkbox {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-weight: 700;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+}
+
+.contact-form label.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 90vw;
-  max-width: 600px;
-  min-width: 220px;
+  width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 16px;
   box-sizing: border-box;
-  margin: 0 auto;
-  display: block;
 }
 
 /* --- 宅配フォーム --- */
@@ -375,6 +375,20 @@ section {
   border-radius: 10px;
   font-weight: 700;
   cursor: pointer;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.btn-ghost {
+  background: #fff;
+  color: #e60012;
+  border: 2px solid #e60012;
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  opacity: .92;
 }
 
 .btn-primary:hover,
